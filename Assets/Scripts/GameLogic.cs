@@ -122,7 +122,7 @@ public class GameLogic : MonoBehaviour
 		iTween.MoveTo (player, 
 			iTween.Hash (
 				"position", startPoint.transform.position, 
-				"time", 4, 
+				"time", 6, 
 				"easetype", "linear",
 				"oncomplete", "resetGame", 
 				"oncompletetarget", this.gameObject
@@ -155,7 +155,7 @@ public class GameLogic : MonoBehaviour
 		iTween.MoveTo (player, 
 			iTween.Hash (
 				"position", restartPoint.transform.position, 
-				"time", 4, 
+				"time", 6, 
 				"easetype", "linear",
 				"oncomplete", "finishingFlourish", 
 				"oncompletetarget", this.gameObject
