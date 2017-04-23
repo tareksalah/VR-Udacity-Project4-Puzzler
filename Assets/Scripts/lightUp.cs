@@ -47,6 +47,8 @@ public class lightUp : MonoBehaviour
 		
 		gameLogic.GetComponent<GameLogic> ().playerSelection (this.gameObject);
 		this.GetComponent<GvrAudioSource> ().Play ();
+		aestheticReset ();
+
 	}
 
 	public void aestheticReset ()

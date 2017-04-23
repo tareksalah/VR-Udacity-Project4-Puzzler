@@ -81,7 +81,7 @@ public class GameLogic : MonoBehaviour
 		startUI.SetActive (false);
 		eventSystem.SetActive (false);
 		Orbs.SetActive (true);
-		iTween.MoveTo (player, playPoint.transform.position, 9f);
+		iTween.MoveTo (player, playPoint.transform.position, 10f);
 		CancelInvoke ("displayPattern");
 		InvokeRepeating ("displayPattern", 3, puzzleSpeed); //Start running through the displaypattern function
 		currentSolveIndex = 0; //Set our puzzle index at 0
@@ -140,6 +140,9 @@ public class GameLogic : MonoBehaviour
 		restartUI.SetActive (false);
 		startUI.SetActive (true);
 		playerWon = false;
+		puzzleLength++;
+//		puzzleSpeed = +0.25f;
+		puzzleOrder = new int[puzzleLength]; //Set the size of our array to the declared puzzle length
 		generatePuzzleSequence (); //Generate the puzzle sequence for this playthrough.  
 	}
 
