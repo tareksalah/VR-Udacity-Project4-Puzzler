@@ -9,6 +9,8 @@ public class GameLogic : MonoBehaviour
 	public GameObject startUI, restartUI;
 	public GameObject startPoint, playPoint, restartPoint;
 	public GameObject[] puzzleSpheres;
+
+	public GameObject Orbs;
 	//An array to hold our puzzle spheres
 
 	public int puzzleLength = 5;
@@ -78,6 +80,7 @@ public class GameLogic : MonoBehaviour
 		//Step through the array for displaying the puzzle, and checking puzzle failure or success.
 		startUI.SetActive (false);
 		eventSystem.SetActive (false);
+		Orbs.SetActive (true);
 		iTween.MoveTo (player, playPoint.transform.position, 9f);
 		CancelInvoke ("displayPattern");
 		InvokeRepeating ("displayPattern", 3, puzzleSpeed); //Start running through the displaypattern function
@@ -152,6 +155,7 @@ public class GameLogic : MonoBehaviour
 
 	public void puzzleSuccess ()
 	{ //Do this when the player gets it right
+		Orbs.SetActive (false);
 		iTween.MoveTo (player, 
 			iTween.Hash (
 				"position", restartPoint.transform.position, 
