@@ -8,5 +8,7 @@ It's simply about creating practicing several design considerations in VR throug
 The scene is within a dungeoun, where a set of orbs flash in a certain order. The player needs to click on the orbs in the same order in order to be able to escape the dungeon.
 
 
+Link to youtube final project: https://www.youtube.com/watch?v=E7uYDaf1j4Q
+
 Google VR SDK version: From this link https://github.com/googlevr/gvr-unity-sdk/releases/tag/v1.0.3  (The one provided with the starter project 3 from Udacity)
 
