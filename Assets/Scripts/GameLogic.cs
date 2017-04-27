@@ -80,7 +80,7 @@ public class GameLogic : MonoBehaviour
 		//Step through the array for displaying the puzzle, and checking puzzle failure or success.
 		startUI.SetActive (false);
 		eventSystem.SetActive (false);
-		Orbs.SetActive (true);
+		Orbs.SetActive (true); // Tarek. Enable the orbs on Pressing Start.
 		iTween.MoveTo (player, playPoint.transform.position, 10f);
 		CancelInvoke ("displayPattern");
 		InvokeRepeating ("displayPattern", 3, puzzleSpeed); //Start running through the displaypattern function
@@ -140,9 +140,10 @@ public class GameLogic : MonoBehaviour
 		restartUI.SetActive (false);
 		startUI.SetActive (true);
 		playerWon = false;
-		puzzleLength++;
-//		puzzleSpeed = +0.25f;
-		puzzleOrder = new int[puzzleLength]; //Set the size of our array to the declared puzzle length
+		puzzleLength++;  		 // On Restart increase the number of Orbs flashing. Tarek
+		//	puzzleSpeed = +0.25f;	 // On Restart increase the speed of flashing of. Tarek
+		puzzleOrder = new int[puzzleLength]; //On Restart, reset the size of the array to the inceased puzzle length. Tarek
+
 		generatePuzzleSequence (); //Generate the puzzle sequence for this playthrough.  
 	}
 
